@@ -42,5 +42,5 @@ jobs:
 
     - name: Deploy to GKE
       run: |
-        kubectl set image deployment/datetime-app my-container=docker.io/${{ secrets.DOCKER_USERNAME }}/datetime-app:dev
-        kubectl rollout status deployment/datetime-app:dev
+        kubectl set image Deployment/datetime-app my-container=docker.io/${{ secrets.DOCKER_USERNAME }}/datetime-app:dev
+        kubectl rollout status Deployment/datetime-app:dev
