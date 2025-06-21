@@ -16,6 +16,6 @@ spec:
       - name: my-container
         image: docker.io/baibhav225/datetime-app:dev
         ports:
-        - containerPort: 80
+        - containerPort: 9090
       imagePullSecrets:
       - name: regcred
