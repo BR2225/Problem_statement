@@ -9,11 +9,10 @@ In other words: Use docker to create a web application with date & time as the o
 ## Step #2:
 Using the declarative approach to deploy the container with 2 replicas to k8s  
 
-## Step #3:
-Expose the app to the Internet (on WAN)
+
 ------------------------------------------------------------------------------------------
 
-# 2.  Introduction
+#   Introduction
 
 ## Brief overview of the project:
 
