@@ -16,7 +16,8 @@ Using the declarative approach to deploy the container with 2 replicas to k8s
 
 ## Brief overview of the project:
 
-This project demonstrates how to create a simple web application in GoLang that displays the current date and time, containerize it using Docker, and deploy it to Kubernetes with high availability (2 replicas). The application is also exposed to the internet using Kubernetes services.
+This project demonstrates how to create a simple web application in GoLang that displays the current date and time, containerize it using Docker, and deploy it to Google Kubernete Engine with high availability (2 replicas). The application is also exposed to the internet using Exposing services  http://34.63.144.205:80
+
 
 ## Technologies Used:
 
