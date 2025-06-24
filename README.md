@@ -33,5 +33,64 @@ This project demonstrates how to create a simple web application in GoLang that 
 
 ![Low-fidelity Wireframes (2)](https://github.com/user-attachments/assets/6606eded-2edd-40d0-8644-281aecefeb37)
 
+# Step-by-Step Breakdown:
 
+## 1. Golang App  
+A simple GoLang web server is created to serve the current date and time.  
 
+The frontend uses HTML & JavaScript for dynamic time updates.
+
+## 2. GitHub Repo  
+The source code is pushed to a public or private GitHub repository.  
+
+This serves as the central version control system for collaboration and backup.
+
+## 3. Dockerfile → Docker Image  
+A Dockerfile is created to define how the application should be packaged as a container.  
+
+The Docker image is built locally using:
+
+```bash
+docker build -t <username>/timeapp .
+```
+## 4. Push to DockerHub
+The Docker image is pushed to DockerHub to make it accessible for Kubernetes deployments:
+
+```bash
+docker push <username>/timeapp
+```
+## 5. K8s YAML Manifests (Deployment + Service)
+
+Kubernetes manifests (deployment.yaml and service.yaml) are created to define:
+
+- Number of replicas (2 pods)
+- Container image source
+- Networking and service exposure
+
+## 6. kubectl apply
+
+The YAML files are applied to the Kubernetes cluster using:
+
+```bash
+kubectl apply -f deployment.yaml  
+kubectl apply -f service.yaml
+```
+## 7. Pods Running
+Kubernetes spins up 2 replicas (pods) of the application container for high availability.
+
+You can verify using:
+```
+kubectl get pods
+```
+## 8. Service Exposes App
+A Kubernetes Service (type: LoadBalancer or NodePort) is used to expose the app.
+
+This allows access from outside the cluster.
+
+## 9. App Accessible on WAN
+Once the external IP is assigned by the Kubernetes service, the application becomes available on the internet.
+
+You can access it using:
+```
+http://<external-ip>.....
+```
